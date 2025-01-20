@@ -5,6 +5,8 @@ public class Main {
     public static void main(String[] args) {
         Logger logger = Logger.getInstance();
         String word = "maDAM  ";
+        String str = "Hello this is Coding factory class!";
+        int number = 10;
 
         logger.logMessage("Application Started");
 
@@ -18,10 +20,7 @@ public class Main {
         System.out.println(StringUtils.reverse(word));
         System.out.println("String is palindrome: " + StringUtils.isPalindrome(word));
 
-
-
-
-
+        System.out.println(ValidationUtils.isValidLength(str));
+        System.out.println(ValidationUtils.isBetweenOneTen(number));
     }
-
 }
