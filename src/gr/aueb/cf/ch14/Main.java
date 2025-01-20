@@ -4,6 +4,7 @@ public class Main {
 
     public static void main(String[] args) {
         Logger logger = Logger.getInstance();
+        String word = "maDAM  ";
 
         logger.logMessage("Application Started");
 
@@ -11,7 +12,15 @@ public class Main {
 
         System.out.println("The maximum number in the array is: " + MathHelper.maxNumber(arr));
         System.out.println("The minimum number in the array is: " + MathHelper.minNumber(arr));
-        System.out.printf("The average number in the array is: %.2f", MathHelper.avgOfArray(arr));
+        System.out.printf("The average number in the array is: %.2f\n", MathHelper.avgOfArray(arr));
+
+        System.out.println(StringUtils.toUpperWord(word));
+        System.out.println(StringUtils.reverse(word));
+        System.out.println("String is palindrome: " + StringUtils.isPalindrome(word));
+
+
+
+
 
     }
 
