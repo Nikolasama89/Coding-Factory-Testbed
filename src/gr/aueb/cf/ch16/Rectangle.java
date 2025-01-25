@@ -1,7 +1,7 @@
 package gr.aueb.cf.ch16;
 
 import gr.aueb.cf.ch16.interfaces.IRectangle;
-import gr.aueb.cf.ch16.interfaces.ITwoDimensional;
+
 
 public class Rectangle extends Shape implements IRectangle {
     private double width;
