@@ -2,6 +2,8 @@ package gr.aueb.cf.ch16;
 
 import gr.aueb.cf.ch16.interfaces.ILine;
 
+import java.util.Objects;
+
 public class Line extends Shape implements ILine {
     private double length;
 
@@ -36,5 +38,14 @@ public class Line extends Shape implements ILine {
                 '}';
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (!(o instanceof Line that)) return false;
+        return Double.compare(getLength(), that.getLength()) == 0;
+    }
 
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(getLength());
+    }
 }

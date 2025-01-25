@@ -2,6 +2,8 @@ package gr.aueb.cf.ch16;
 
 import gr.aueb.cf.ch16.interfaces.IRectangle;
 
+import java.util.Objects;
+
 
 public class Rectangle extends Shape implements IRectangle {
     private double width;
@@ -56,5 +58,16 @@ public class Rectangle extends Shape implements IRectangle {
     @Override
     public long getCircumference() {
         return (long) (2 * (this.width + this.height));
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (!(o instanceof Rectangle that)) return false;
+        return Double.compare(getWidth(), that.getWidth()) == 0 && Double.compare(getHeight(), that.getHeight()) == 0;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getWidth(), getHeight());
     }
 }

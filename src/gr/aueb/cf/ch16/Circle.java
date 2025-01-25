@@ -3,6 +3,8 @@ package gr.aueb.cf.ch16;
 import gr.aueb.cf.ch16.interfaces.ICircle;
 import gr.aueb.cf.ch16.interfaces.ITwoDimensional;
 
+import java.util.Objects;
+
 public class Circle extends Shape implements ITwoDimensional, ICircle {
 
 
@@ -52,5 +54,16 @@ public class Circle extends Shape implements ITwoDimensional, ICircle {
     @Override
     public double getDiameter() {
         return radius * 2;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (!(o instanceof Circle that)) return false;
+        return Double.compare(getRadius(), that.getRadius()) == 0;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(getRadius());
     }
 }
