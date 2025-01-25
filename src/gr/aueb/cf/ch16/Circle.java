@@ -1,6 +1,8 @@
 package gr.aueb.cf.ch16;
 
-public class Circle extends Shape{
+public class Circle extends Shape implements ITwoDimensional{
+
+
     private double radius;
 
     public Circle(){}
@@ -32,5 +34,10 @@ public class Circle extends Shape{
         return "Circle{" +
                 "radius=" + radius +
                 '}';
+    }
+
+    @Override
+    public double getArea() {
+        return Math.PI * Math.pow(this.radius, 2);
     }
 }

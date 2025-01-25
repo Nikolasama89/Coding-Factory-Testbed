@@ -1,6 +1,6 @@
 package gr.aueb.cf.ch16;
 
-public class Rectangle extends Shape{
+public class Rectangle extends Shape implements ITwoDimensional{
     private double width;
     private double height;
 
@@ -43,5 +43,10 @@ public class Rectangle extends Shape{
                 "width=" + width +
                 ", height=" + height +
                 '}';
+    }
+
+    @Override
+    public double getArea() {
+        return this.width * this.height;
     }
 }
