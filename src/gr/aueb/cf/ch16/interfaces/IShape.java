@@ -1,4 +1,4 @@
-package gr.aueb.cf.ch16;
+package gr.aueb.cf.ch16.interfaces;
 
 public interface IShape {
     /**

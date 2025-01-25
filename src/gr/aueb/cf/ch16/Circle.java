@@ -1,6 +1,9 @@
 package gr.aueb.cf.ch16;
 
-public class Circle extends Shape implements ITwoDimensional{
+import gr.aueb.cf.ch16.interfaces.ICircle;
+import gr.aueb.cf.ch16.interfaces.ITwoDimensional;
+
+public class Circle extends Shape implements ITwoDimensional, ICircle {
 
 
     private double radius;
@@ -39,5 +42,15 @@ public class Circle extends Shape implements ITwoDimensional{
     @Override
     public double getArea() {
         return Math.PI * Math.pow(this.radius, 2);
+    }
+
+    @Override
+    public long getCircumference() {
+        return (long) (Math.PI * 2 * this.radius);
+    }
+
+    @Override
+    public double getDiameter() {
+        return radius * 2;
     }
 }

@@ -1,6 +1,8 @@
 package gr.aueb.cf.ch16;
 
-public class Rectangle extends Shape implements ITwoDimensional{
+import gr.aueb.cf.ch16.interfaces.ITwoDimensional;
+
+public class Rectangle extends Shape implements ITwoDimensional {
     private double width;
     private double height;
 

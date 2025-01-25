@@ -1,5 +1,7 @@
 package gr.aueb.cf.ch16;
 
+import gr.aueb.cf.ch16.interfaces.IShape;
+
 public abstract class Shape implements IShape {
     private long id;
 
