@@ -1,6 +1,8 @@
+/**
+ * Exercises from chapter 16, 17
+ */
+
 package gr.aueb.cf.ch16;
-
-
 
 import java.io.*;
 
