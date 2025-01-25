@@ -5,7 +5,7 @@ import gr.aueb.cf.ch16.interfaces.ILine;
 import java.io.Serializable;
 import java.util.Objects;
 
-public class Line extends Shape implements ILine, Serializable {
+public class Line extends Shape implements ILine, Serializable, Cloneable {
     private double length;
 
     public Line(){}
@@ -14,6 +14,7 @@ public class Line extends Shape implements ILine, Serializable {
         this.length = length;
     }
 
+    //Copy Constructor
     public Line(Line line) {
         this.length = line.length;
     }
@@ -52,5 +53,11 @@ public class Line extends Shape implements ILine, Serializable {
     @Override
     public int hashCode() {
         return Objects.hashCode(getLength());
+    }
+
+    //Cloneable
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        return super.clone();
     }
 }

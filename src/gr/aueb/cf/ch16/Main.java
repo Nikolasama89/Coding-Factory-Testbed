@@ -1,7 +1,7 @@
 package gr.aueb.cf.ch16;
 
 
-import javax.imageio.IIOException;
+
 import java.io.*;
 
 public class Main {

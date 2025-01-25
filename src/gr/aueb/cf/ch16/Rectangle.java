@@ -6,7 +6,7 @@ import java.io.Serializable;
 import java.util.Objects;
 
 
-public class Rectangle extends Shape implements IRectangle, Serializable {
+public class Rectangle extends Shape implements IRectangle, Serializable, Cloneable {
     private double width;
     private double height;
 
@@ -17,6 +17,7 @@ public class Rectangle extends Shape implements IRectangle, Serializable {
         this.height = height;
     }
 
+    //Copy Constructor
     public Rectangle(Rectangle rectangle) {
         this.width = rectangle.width;
         this.height = rectangle.height;
@@ -75,5 +76,11 @@ public class Rectangle extends Shape implements IRectangle, Serializable {
     @Override
     public int hashCode() {
         return Objects.hash(getWidth(), getHeight());
+    }
+
+    //Cloneable
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        return super.clone();
     }
 }

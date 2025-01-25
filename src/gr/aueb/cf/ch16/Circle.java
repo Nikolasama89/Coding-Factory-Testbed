@@ -6,7 +6,7 @@ import gr.aueb.cf.ch16.interfaces.ITwoDimensional;
 import java.io.Serializable;
 import java.util.Objects;
 
-public class Circle extends Shape implements ITwoDimensional, ICircle, Serializable {
+public class Circle extends Shape implements ITwoDimensional, ICircle, Serializable, Cloneable {
 
 
     private double radius;
@@ -72,5 +72,11 @@ public class Circle extends Shape implements ITwoDimensional, ICircle, Serializa
     @Override
     public int hashCode() {
         return Objects.hashCode(getRadius());
+    }
+
+    // Cloneable
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        return super.clone();
     }
 }
