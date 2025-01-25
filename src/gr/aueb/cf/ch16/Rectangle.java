@@ -1,8 +1,9 @@
 package gr.aueb.cf.ch16;
 
+import gr.aueb.cf.ch16.interfaces.IRectangle;
 import gr.aueb.cf.ch16.interfaces.ITwoDimensional;
 
-public class Rectangle extends Shape implements ITwoDimensional {
+public class Rectangle extends Shape implements IRectangle {
     private double width;
     private double height;
 
@@ -50,5 +51,10 @@ public class Rectangle extends Shape implements ITwoDimensional {
     @Override
     public double getArea() {
         return this.width * this.height;
+    }
+
+    @Override
+    public long getCircumference() {
+        return (long) (2 * (this.width + this.height));
     }
 }

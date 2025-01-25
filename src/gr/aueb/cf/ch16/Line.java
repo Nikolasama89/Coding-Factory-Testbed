@@ -1,6 +1,8 @@
 package gr.aueb.cf.ch16;
 
-public class Line extends Shape{
+import gr.aueb.cf.ch16.interfaces.ILine;
+
+public class Line extends Shape implements ILine {
     private double length;
 
     public Line(){}
@@ -33,4 +35,6 @@ public class Line extends Shape{
                 "length=" + length +
                 '}';
     }
+
+
 }
