@@ -13,6 +13,12 @@ public class Main {
         System.out.println(line.getLength());
         System.out.println(rec.getCircumference());
 
+        Line line2 = new Line(line);
+        line2.setLength(5);
+
+        System.out.println(line);
+        System.out.println(line2);
+
 
 
     }

@@ -13,6 +13,10 @@ public class Line extends Shape implements ILine {
         this.length = length;
     }
 
+    public Line(Line line) {
+        this.length = line.length;
+    }
+
     @Override
     public void setId(long id) {
         super.setId(id);

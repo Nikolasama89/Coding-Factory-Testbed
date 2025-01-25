@@ -16,6 +16,11 @@ public class Rectangle extends Shape implements IRectangle {
         this.height = height;
     }
 
+    public Rectangle(Rectangle rectangle) {
+        this.width = rectangle.width;
+        this.height = rectangle.height;
+    }
+
     @Override
     public void setId(long id) {
         super.setId(id);

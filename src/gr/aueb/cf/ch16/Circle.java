@@ -16,6 +16,12 @@ public class Circle extends Shape implements ITwoDimensional, ICircle {
         this.radius = radius;
     }
 
+    // Copy Constructor
+    public Circle(Circle circle) {
+        this.radius = circle.radius;
+    }
+
+
     @Override
     public void setId(long id) {
         super.setId(id);
