@@ -1,5 +1,9 @@
 package gr.aueb.cf.ch16;
 
+
+import javax.imageio.IIOException;
+import java.io.*;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -19,7 +23,15 @@ public class Main {
         System.out.println(line);
         System.out.println(line2);
 
+        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("C:\\Users\\niqos\\Desktop\\circle.ser"))) {
+            oos.writeObject(circle);
 
-
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (NotSerializableException e1) {
+            System.out.println("Not Serializable");
+        } catch (IOException e2) {
+            System.out.println(e2.getMessage());
+        }
     }
 }

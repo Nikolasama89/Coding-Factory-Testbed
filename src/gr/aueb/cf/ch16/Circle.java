@@ -3,9 +3,10 @@ package gr.aueb.cf.ch16;
 import gr.aueb.cf.ch16.interfaces.ICircle;
 import gr.aueb.cf.ch16.interfaces.ITwoDimensional;
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public class Circle extends Shape implements ITwoDimensional, ICircle {
+public class Circle extends Shape implements ITwoDimensional, ICircle, Serializable {
 
 
     private double radius;

@@ -2,10 +2,11 @@ package gr.aueb.cf.ch16;
 
 import gr.aueb.cf.ch16.interfaces.IRectangle;
 
+import java.io.Serializable;
 import java.util.Objects;
 
 
-public class Rectangle extends Shape implements IRectangle {
+public class Rectangle extends Shape implements IRectangle, Serializable {
     private double width;
     private double height;
 

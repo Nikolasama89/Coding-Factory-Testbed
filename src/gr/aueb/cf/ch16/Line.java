@@ -2,9 +2,10 @@ package gr.aueb.cf.ch16;
 
 import gr.aueb.cf.ch16.interfaces.ILine;
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public class Line extends Shape implements ILine {
+public class Line extends Shape implements ILine, Serializable {
     private double length;
 
     public Line(){}
